@@ -4,7 +4,7 @@ const cors = require('cors');
 const { Server } = require('socket.io');
 
 const app = express();
-const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
+const FRONTEND_URL = "https://chat-website-frontend.vercel.app/chatroom/*" || 'http://localhost:5173';
 const server = http.createServer(app);
 
 app.use(cors({
