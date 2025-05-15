@@ -4,10 +4,11 @@ const cors = require('cors');
 const { Server } = require('socket.io');
 
 const app = express();
+const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 const server = http.createServer(app);
 
 app.use(cors({
-  origin: 'http://localhost:5173',  // Frontend URL
+  origin: FRONTEND_URL,  // Frontend URL
   methods: ['GET', 'POST'],
 }));
 
